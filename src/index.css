@@ -1,0 +1,191 @@
+/* MK Whiteboard Design System */
+/* Zero gradients, zero emojis, editorial typography & authentic craftsmanship */
+
+:root {
+  --font-serif: 'Newsreader', Georgia, Cambria, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Color Palette - derived from brand logo and editorial references */
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-bg-elevated: #f1f5f9;
+  
+  --color-border: #e2e8f0;
+  --color-border-subtle: #edf2f7;
+  --color-border-strong: #cbd5e1;
+
+  --color-text-main: #0f172a;       /* Deep slate from logo */
+  --color-text-muted: #475569;      /* Slate 600 */
+  --color-text-subtle: #64748b;     /* Slate 500 */
+  --color-text-faint: #94a3b8;      /* Slate 400 */
+
+  --color-brand-blue: #0284c7;      /* Precision blue from logo */
+  --color-brand-blue-hover: #0369a1;
+  --color-brand-blue-subtle: #f0f9ff;
+  --color-brand-blue-border: #bae6fd;
+
+  --color-pill-cta: #0f172a;
+  --color-pill-cta-hover: #1e293b;
+  --color-pill-cta-text: #ffffff;
+
+  --color-tag-bg: #f1f5f9;
+  --color-tag-border: #e2e8f0;
+  --color-tag-text: #334155;
+
+  /* Sticky Note Pastel Palette from MK Whiteboard */
+  --sticky-yellow: #fef08a;
+  --sticky-yellow-border: #fde047;
+  --sticky-blue: #bfdbfe;
+  --sticky-blue-border: #93c5fd;
+  --sticky-green: #bbf7d0;
+  --sticky-green-border: #86efac;
+  --sticky-pink: #fbcfe8;
+  --sticky-pink-border: #f472b6;
+
+  /* Layout */
+  --max-width: 1200px;
+  --container-padding: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-text-main);
+  background-color: var(--color-bg);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Pill Buttons */
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: all 0.15s ease-in-out;
+  white-space: nowrap;
+}
+
+.pill-button-primary {
+  background-color: var(--color-pill-cta);
+  color: var(--color-pill-cta-text);
+  border: 1px solid var(--color-pill-cta);
+}
+
+.pill-button-primary:hover {
+  background-color: var(--color-pill-cta-hover);
+  border-color: var(--color-pill-cta-hover);
+  transform: translateY(-1px);
+}
+
+.pill-button-secondary {
+  background-color: #ffffff;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border-strong);
+}
+
+.pill-button-secondary:hover {
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-text-main);
+}
+
+.pill-button-outline {
+  background-color: transparent;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border-strong);
+}
+
+.pill-button-outline:hover {
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-text-main);
+}
+
+/* Tag / Eyebrow pill */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background-color: var(--color-tag-bg);
+  border: 1px solid var(--color-tag-border);
+  border-radius: 9999px;
+  letter-spacing: 0.01em;
+}
+
+.pill-badge-blue {
+  color: var(--color-brand-blue);
+  background-color: var(--color-brand-blue-subtle);
+  border-color: var(--color-brand-blue-border);
+}
+
+/* Minimalist borders and dividers */
+.border-divider {
+  border-top: 1px solid var(--color-border);
+}
+
+/* Subtle flat box shadows without fuzzy blur */
+.clean-border-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.clean-border-card:hover {
+  border-color: var(--color-border-strong);
+}
