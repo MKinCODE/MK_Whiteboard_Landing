@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import InteractiveAppPreview from './components/InteractiveAppPreview';
@@ -15,6 +16,7 @@ export default function App() {
         <TrustAndSpecs />
         <BottomSection />
       </main>
+      <Analytics />
     </div>
   );
 }
